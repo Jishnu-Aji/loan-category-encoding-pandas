@@ -142,6 +142,14 @@ All categorical values are converted into numeric values (0 and 1), making the d
 
 ![Encoded Dataset](screenshots/encoded_dataset.png)
 
+
+## Results
+
+- Original Dataset Shape: (45015, 12)
+- Encoded Dataset Shape: (45015, 24)
+- Categorical Columns Encoded: 4
+- Encoding Methods: Label Encoding, One-Hot Encoding
+
 ## Learning Outcomes
 
 - Data preprocessing with Pandas
