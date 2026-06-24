@@ -2,21 +2,21 @@
 
 ## Overview
 
-This project demonstrates how to convert categorical variables into numerical values using only Pandas. The loan dataset is preprocessed using Label Encoding and One-Hot Encoding techniques, making it suitable for machine learning models.
+This project demonstrates how to convert categorical variables into numerical values using only Pandas. The loan dataset is preprocessed using Label Encoding and One-Hot Encoding techniques to prepare it for machine learning applications.
 
 ## Dataset
 
-**Dataset Used:** `loan.csv`
+Dataset used: `loan.csv`
 
-The dataset contains loan applicant information, including demographic details, loan attributes, and loan status.
+The dataset contains loan applicant information such as demographics, financial details, loan characteristics, and loan approval status.
 
 ## Objective
 
 - Load the dataset using Pandas
 - Identify categorical columns
-- Convert categorical values into numerical values
-- Use only Pandas for all preprocessing operations
-- Save the transformed dataset for further analysis
+- Convert categorical variables into numerical values
+- Perform all preprocessing using only Pandas
+- Generate an encoded dataset ready for machine learning
 
 ## Technologies Used
 
@@ -26,7 +26,7 @@ The dataset contains loan applicant information, including demographic details, 
 ## Project Structure
 
 ```text
-loan-category-encoding/
+loan-category-encoding-pandas/
 │
 ├── loan.csv
 ├── encoded_loan.csv
@@ -38,31 +38,31 @@ loan-category-encoding/
     └── encoded_dataset.png
 ```
 
-## Categorical Columns Identified
+## Categorical Columns Detected
 
-The following categorical columns were detected and encoded:
+The following categorical columns were identified and encoded:
 
 - loan_intent
 - person_education
 - person_gender
 - person_home_ownership
 
-## Encoding Techniques Used
+## Encoding Methods
 
 ### Label Encoding
 
-Binary categorical columns are converted into numeric values using Pandas category codes.
+Binary categorical values are converted into numerical codes.
 
 Example:
 
 | Gender | Encoded |
-|---------|---------|
+|----------|----------|
 | Male | 1 |
 | Female | 0 |
 
 ### One-Hot Encoding
 
-Columns with multiple categories are converted into separate binary columns.
+Multi-category columns are converted into separate binary columns.
 
 Example:
 
@@ -74,21 +74,21 @@ Example:
 
 Becomes:
 
-| loan_intent_EDUCATION | loan_intent_PERSONAL | loan_intent_MEDICAL |
-|-----------------------|----------------------|---------------------|
+| EDUCATION | PERSONAL | MEDICAL |
+|------------|------------|------------|
 | 1 | 0 | 0 |
 | 0 | 1 | 0 |
 | 0 | 0 | 1 |
 
-## Python Script
+## Implementation
 
-The preprocessing script:
+The Python script performs the following steps:
 
-- Loads the dataset
-- Detects categorical columns automatically
-- Applies Label Encoding for binary categories
-- Applies One-Hot Encoding for multi-category features
-- Saves the encoded dataset
+1. Loads the dataset
+2. Detects categorical columns automatically
+3. Applies Label Encoding to binary categories
+4. Applies One-Hot Encoding to multi-category columns
+5. Saves the transformed dataset
 
 ## How to Run
 
@@ -98,15 +98,13 @@ The preprocessing script:
 pip install -r requirements.txt
 ```
 
-### Execute the Script
+### Run the Script
 
 ```bash
 python category_encoding.py
 ```
 
 ## Output
-
-After execution:
 
 ```text
 Dataset Shape: (45015, 12)
@@ -124,13 +122,15 @@ Encoded dataset saved as encoded_loan.csv
 Final Shape: (45015, 24)
 ```
 
-## Generated File
+## Encoded Dataset
+
+The processed dataset is saved as:
 
 ```text
 encoded_loan.csv
 ```
 
-The final dataset contains only numerical values and is ready for machine learning workflows.
+All categorical values are converted into numeric values (0 and 1), making the dataset suitable for machine learning algorithms.
 
 ## Screenshots
 
@@ -144,10 +144,10 @@ The final dataset contains only numerical values and is ready for machine learni
 
 ## Learning Outcomes
 
-- Data preprocessing using Pandas
-- Identifying categorical variables
+- Data preprocessing with Pandas
+- Identifying categorical features
 - Label Encoding
 - One-Hot Encoding
-- Preparing datasets for machine learning
-- Saving transformed datasets for future use
+- Feature transformation for machine learning
+- Exporting processed datasets
 
